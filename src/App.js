@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import {Container} from "@mui/material";
+import Navigator from "./components/Navigator";
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import Homepage from "./components/Homepage";
+import Footer from "./components/Footer";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <Container maxWidth="100vh">
+            <Container maxWidth="md">
+                <Router>
+                    <Navigator/>
+                    <Routes>
+                        <Route path="/" element={<Homepage/>}/>
+                    </Routes>
+                    <Footer></Footer>
+                </Router>
+            </Container>
+        </Container>
+    );
 }
 
 export default App;

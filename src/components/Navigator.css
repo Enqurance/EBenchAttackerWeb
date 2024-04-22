@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+.nav-style {
+    height: 100px;
+}
+
+.nav-title-style {
+    font-size: 26px;
+    font-weight: 600;
+    font-family: Josefin Sans, serif;
+    text-decoration: none;
+    align-items: center;
+    height: 100%;
+    padding-left: 10px;
+}
+
+.nav-text-style {
+    font-size: 20px;
+    font-weight: 600;
+    font-family: Josefin Sans, serif;
+    text-decoration: none;
+    align-items: center;
+    height: 100%;
+    padding-left: 20px;
+}
