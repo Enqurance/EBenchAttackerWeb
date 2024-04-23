@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
-
-.typing-style {
+.title-style {
     font-size: 25px;
     font-family: Josefin Sans, serif;
     font-weight: 400;
@@ -14,17 +12,16 @@
     line-height: 1.5;
 }
 
-.text-item-style {
-    font-size: 18px;
+.table-head-style {
+    font-size: 16px;
     font-family: Josefin Sans, serif;
-    font-weight: 350;
+    font-weight: 500;
 }
 
-.text-item-title-style {
-    padding-bottom: 10px;
-    font-size: 20px;
+.table-content-style {
+    font-size: 16px;
     font-family: Josefin Sans, serif;
-    font-weight: 400;
+    font-weight: 350;
 }
 
 .paragraph-style {

@@ -12,7 +12,12 @@ function Navigator() {
             </Item>
             <Item>
                 <Grid container className="nav-title-style">
-                    EBenchAttacker
+                    <Link href="/"
+                          color="inherit"
+                          underline="none">
+                        <span style={{color: "#B22222"}}>EBench</span>
+                        <span>Attacker</span>
+                    </Link>
                 </Grid>
             </Item>
             <Box flexGrow={1}/>
@@ -23,12 +28,16 @@ function Navigator() {
             </Item>
             <Item>
                 <Grid container className="nav-text-style">
-                    Leaderboard
+                    <Link href="/leaderboard"
+                          color="inherit"
+                          underline="none">
+                        Leaderboard
+                    </Link>
                 </Grid>
             </Item>
             <Item>
-                <Grid container className="nav-text-style">
-                    <Link href="https://github.com/Enqurance/LLMAttacks"
+                <Grid container className=" nav-text-style">
+                    <Link href=" https://github.com/Enqurance/LLMAttacks"
                           color="inherit"
                           underline="none"
                           target="_blank">

@@ -17,105 +17,112 @@ function Homepage() {
         'The tool is developed by Enqurance Lin, a student at BUAA.'
     ]
 
-    return (<Grid container>
-        <Grid xs={12} className="typing-style" paddingTop={5}>
-            <Typewriter
-                onInit={(typewriter) => {
-                    typewriter
-                        .typeString(typing[0])
-                        .pauseFor(2500)
-                        .deleteAll()
-                        .typeString(typing[1])
-                        .pauseFor(2500)
-                        .start();
-                }}
-                options={{
-                    loop: true,
-                }}
-            />
-        </Grid>
-        <Grid xs={12} className="text-style paragraph-style">
-            EBenchAttacker is a simple and easy-to-use tool that can evaluate the alignment ability of large language
-            models(LLMs). You can easily integrate various open source or commercial models into EBenchAttacker, as long
-            as you have the relevant access and computing resources. The development of the tool is supported by Beijing
-            Advanced Innovation Center for Big Data and Brain Computing.
-        </Grid>
-        <Grid xs={12} paddingTop={5}>
-            <MyImageList info={ebenchattacker}></MyImageList>
-        </Grid>
-        <Grid xs={12}>
-            <Grid container className="text-style paragraph-style">
-                EBenchAttack has the following designs:
+    return (
+        <Grid container>
+            <Grid item xs={12} className="typing-style" paddingTop={5}>
+                <Typewriter
+                    onInit={(typewriter) => {
+                        typewriter
+                            .typeString(typing[0])
+                            .pauseFor(2500)
+                            .deleteAll()
+                            .typeString(typing[1])
+                            .pauseFor(2500)
+                            .start();
+                    }}
+                    options={{
+                        loop: true,
+                    }}
+                />
             </Grid>
-            <List>
-                <ListItem>
-                    <Grid>
-                        <FormatListBulletedIcon sx={{fontSize: 40, color: "#B22222"}}/>
-                    </Grid>
-                    <Grid container paddingLeft={3}>
-                        <Grid className="text-item-title-style">Scenes</Grid>
-                        <Grid className="text-item-style">
-                            EBenchAttacker considers scenarios including cybercrime, fraud, political sensitivity and so
-                            on. The design of the scene refers to some public terms of service of OpenAI, Meta, etc.
-                        </Grid>
-                    </Grid>
-                </ListItem>
-                <ListItem>
-                    <Grid>
-                        <HelpOutlineIcon sx={{fontSize: 40, color: "#B22222"}}/>
-                    </Grid>
-                    <Grid container paddingLeft={3}>
-                        <Grid className="text-item-title-style">EBench - Harmful Questions Set</Grid>
-                        <Grid className="text-item-style">
-                            EBench is our specialized dataset designed for EBenchAttacker. It contains 1,000 harmful
-                            questions, 10 scenarios, each harmful question written in eight languages.
-                        </Grid>
-                    </Grid>
-                </ListItem>
-                <ListItem>
-                    <Grid>
-                        <MemoryIcon sx={{fontSize: 40, color: "#B22222"}}/>
-                    </Grid>
-                    <Grid container paddingLeft={3}>
-                        <Grid className="text-item-title-style">Target Models</Grid>
-                        <Grid className="text-item-style">
-                            EBenchAttacker integrated four open source models and three commercial models and can be
-                            easily expanded.
-                        </Grid>
-                    </Grid>
-                </ListItem>
-                <ListItem>
-                    <Grid>
-                        <BlockIcon sx={{fontSize: 40, color: "#B22222"}}/>
-                    </Grid>
-                    <Grid container paddingLeft={3}>
-                        <Grid className="text-item-title-style">Attack Methods</Grid>
-                        <Grid className="text-item-style">
-                            EBenchAttacker integrated Default Attack, GCG, PAIR and other
-                            attack methods to attack LLMs and collects experimental data.
-                        </Grid>
-                    </Grid>
-                </ListItem>
-                <ListItem>
-                    <Grid>
-                        <AutoGraphIcon sx={{fontSize: 40, color: "#B22222"}}/>
-                    </Grid>
-                    <Grid container paddingLeft={3}>
-                        <Grid className="text-item-title-style">Analysis</Grid>
-                        <Grid className="text-item-style">
-                            After using EBenchAttacker to attack, we analyze the experimental results and present them.
-                        </Grid>
-                    </Grid>
-                </ListItem>
+            <Grid item xs={12} className="text-style paragraph-style">
+                EBenchAttacker is a simple and easy-to-use tool that can evaluate the alignment ability of large
+                language
+                models(LLMs). You can easily integrate various open source or commercial models into EBenchAttacker, as
+                long
+                as you have the relevant access and computing resources. The development of the tool is supported by
+                Beijing
+                Advanced Innovation Center for Big Data and Brain Computing.
+            </Grid>
+            <Grid item xs={12} paddingTop={5}>
+                <MyImageList info={ebenchattacker}></MyImageList>
+            </Grid>
+            <Grid item xs={12}>
                 <Grid container className="text-style paragraph-style">
-                    By utilizing EBenchAttacker for the analysis of LLMs, we can gain a more
-                    comprehensive understanding of their security aspects. This enables us to refine the model in a
-                    manner that enhances its security and compliance. Additionally, our tool has the potential to
-                    inspire future research endeavors.
+                    EBenchAttack has the following designs:
                 </Grid>
-            </List>
+                <List>
+                    <ListItem>
+                        <Grid>
+                            <FormatListBulletedIcon sx={{fontSize: 40, color: "#B22222"}}/>
+                        </Grid>
+                        <Grid container paddingLeft={3}>
+                            <Grid item xs={12} className="text-item-title-style">Scenes</Grid>
+                            <Grid item xs={12} className="text-item-style">
+                                EBenchAttacker considers scenarios including cybercrime, fraud, political sensitivity
+                                and so
+                                on. The design of the scene refers to some public terms of service of OpenAI, Meta, etc.
+                            </Grid>
+                        </Grid>
+                    </ListItem>
+                    <ListItem>
+                        <Grid>
+                            <HelpOutlineIcon sx={{fontSize: 40, color: "#B22222"}}/>
+                        </Grid>
+                        <Grid container paddingLeft={3}>
+                            <Grid item xs={12} className="text-item-title-style">EBench - Harmful Questions Set</Grid>
+                            <Grid item xs={12} className="text-item-style">
+                                EBench is our specialized dataset designed for EBenchAttacker. It contains 1,000 harmful
+                                questions, 10 scenarios, each harmful question written in eight languages.
+                            </Grid>
+                        </Grid>
+                    </ListItem>
+                    <ListItem>
+                        <Grid>
+                            <MemoryIcon sx={{fontSize: 40, color: "#B22222"}}/>
+                        </Grid>
+                        <Grid container paddingLeft={3}>
+                            <Grid item xs={12} className="text-item-title-style">Target Models</Grid>
+                            <Grid item xs={12} className="text-item-style">
+                                EBenchAttacker integrated four open source models and three commercial models and can be
+                                easily expanded.
+                            </Grid>
+                        </Grid>
+                    </ListItem>
+                    <ListItem>
+                        <Grid>
+                            <BlockIcon sx={{fontSize: 40, color: "#B22222"}}/>
+                        </Grid>
+                        <Grid container paddingLeft={3}>
+                            <Grid item xs={12} className="text-item-title-style">Attack Methods</Grid>
+                            <Grid item xs={12} className="text-item-style">
+                                EBenchAttacker integrated Default Attack, GCG, PAIR and other
+                                attack methods to attack LLMs and collects experimental data.
+                            </Grid>
+                        </Grid>
+                    </ListItem>
+                    <ListItem>
+                        <Grid>
+                            <AutoGraphIcon sx={{fontSize: 40, color: "#B22222"}}/>
+                        </Grid>
+                        <Grid container paddingLeft={3}>
+                            <Grid item xs={12} className="text-item-title-style">Analysis</Grid>
+                            <Grid item xs={12} className="text-item-style">
+                                After using EBenchAttacker to attack, we analyze the experimental results and present
+                                them.
+                            </Grid>
+                        </Grid>
+                    </ListItem>
+                    <Grid container className="text-style paragraph-style">
+                        By utilizing EBenchAttacker for the analysis of LLMs, we can gain a more
+                        comprehensive understanding of their security aspects. This enables us to refine the model in a
+                        manner that enhances its security and compliance. Additionally, our tool has the potential to
+                        inspire future research endeavors.
+                    </Grid>
+                </List>
+            </Grid>
         </Grid>
-    </Grid>)
+    )
 }
 
 const ebenchattacker = {
