@@ -15,32 +15,36 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import "./Leaderboard.css"
 
-function createData(ModelName, Publisher, Default, Multilingual, GCG_Transfer, PAIR, GPTFuzz, AutoDAN) {
+function createData(ModelName, Publisher, DefaultAttack, Multilingual, GCG, GCG_Transfer, PAIR, GPTFuzz, AutoDAN) {
     return {
-        ModelName,
-        Publisher,
-        Default,
-        Multilingual,
-        GCG_Transfer,
-        PAIR,
-        GPTFuzz,
-        AutoDAN,
+        "Model Name": ModelName,
+        "Publisher": Publisher,
+        "Default Attack": DefaultAttack,
+        "Multilingual": Multilingual,
+        "GCG": GCG,
+        "GCG Transfer": GCG_Transfer,
+        "PAIR": PAIR,
+        "GPTFuzz": GPTFuzz,
+        "AutoDAN": AutoDAN,
     };
 }
+
+const columns = [
+    "",
+    "Model Name",
+    "Publisher",
+    "Default Attack",
+    "Multilingual",
+    "GCG",
+    "GCG Transfer",
+    "PAIR",
+    "GPTFuzz",
+    "AutoDAN",
+];
 
 function Row(props) {
     const {row} = props;
     const [open, setOpen] = React.useState(false);
-    const methods = [
-        "ModelName",
-        "Publisher",
-        "Default",
-        "Multilingual",
-        "GCG_Transfer",
-        "PAIR",
-        "GPTFuzz",
-        "AutoDAN"
-    ]
 
     return (
         <React.Fragment>
@@ -54,8 +58,8 @@ function Row(props) {
                         {open ? <KeyboardArrowUpIcon/> : <KeyboardArrowDownIcon/>}
                     </IconButton>
                 </TableCell>
-                {methods.map(field => (
-                    <TableCell key={field}>
+                {columns.slice(1).map(field => (
+                    <TableCell align="center" key={field}>
                         <span className="table-content-style">
                             {row[field]}
                         </span>
@@ -63,11 +67,13 @@ function Row(props) {
                 ))}
             </TableRow>
             <TableRow>
-                <TableCell style={{paddingBottom: 0, paddingTop: 0}} colSpan={methods.length + 1}>
+                <TableCell style={{paddingBottom: 0, paddingTop: 0}} colSpan={columns.length}>
                     <Collapse in={open} timeout="auto" unmountOnExit>
                         <Box sx={{margin: 1}}>
                             <Typography variant="h6" gutterBottom component="div">
-                                History
+                                <span className="text-style">
+                                    Todo: Need some complementary information here.
+                                </span>
                             </Typography>
                         </Box>
                     </Collapse>
@@ -90,28 +96,16 @@ Row.propTypes = {
 };
 
 const rows = [
-    createData('Baichuan2-7B-chat-hf', "Baichuan-inc", NaN, NaN, NaN, NaN, NaN, NaN),
-    createData('ChatGLM3-6B', "THUDM", NaN, NaN, NaN, NaN, NaN, NaN),
-    createData('Gemma-2B', "Google", NaN, NaN, NaN, NaN, NaN, NaN),
-    createData('LLaMA-2-7B-chat-ht', "Meta", NaN, NaN, NaN, NaN, NaN, NaN),
-    createData('GPT-3.5', "OpenAI", NaN, NaN, NaN, NaN, NaN, NaN),
-    createData('GPT-4', "OpenAI", NaN, NaN, NaN, NaN, NaN, NaN),
-    createData('Claude-Instant-1.2', "Anthropic", NaN, NaN, NaN, NaN, NaN, NaN),
+    createData('Baichuan2-7B-chat-hf', "Baichuan-inc", "34.0%", "29.0%", "100.0%", "23.0%", "37.0%", "100.0%", "—"),
+    createData('ChatGLM3-6B', "THUDM", "27.0%", "28.8%", "—", "28.3%", "31.0%", "100.0%", "—"),
+    createData('Gemma-2B', "Google", "46.0%", "31.2%", "35.0%", "21.0%", "39.0%", "84.0%", "—"),
+    createData('LLaMA-2-7B-chat-ht', "Meta", "46.0%", "20.4%", "87.0%", "28.5%", "46.0%", "18.0%", "—"),
+    createData('GPT-3.5', "OpenAI", "27.0%", "38.6%", "—", "31.7%", "37.0%", "92.0%", "—"),
+    createData('GPT-4', "OpenAI", "14.0%", "32.0%", "—", "13.7%", "27.0%", "92.0%", "—"),
+    createData('Claude-Instant-1.2', "Anthropic", "4.0%", "11.0%", "—", "—", "—", "—", "—"),
 ];
 
 export default function LeaderboardTable() {
-    const columns = [
-        "",
-        "Model Name",
-        "Publisher",
-        "Default Attack",
-        "Multilingual",
-        "GCG(Transfer)",
-        "PAIR",
-        "GPTFuzz",
-        "AutoDAN",
-    ];
-
 
     return (
         <TableContainer component={Paper}>
@@ -119,7 +113,7 @@ export default function LeaderboardTable() {
                 <TableHead>
                     <TableRow>
                         {columns.map(column => (
-                            <TableCell>
+                            <TableCell align="center">
                                 <span className={"table-head-style"}>
                                     {column}
                                 </span>
