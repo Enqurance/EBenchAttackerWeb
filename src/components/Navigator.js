@@ -23,7 +23,11 @@ function Navigator() {
             <Box flexGrow={1}/>
             <Item>
                 <Grid container className="nav-text-style">
-                    Documentation
+                    <Link href="/documentation"
+                          color="inherit"
+                          underline="none">
+                        Documentation
+                    </Link>
                 </Grid>
             </Item>
             <Item>

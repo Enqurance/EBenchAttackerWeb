@@ -1,6 +1,7 @@
 import {Grid} from "@mui/material";
 import "./Leaderboard.css"
 import LeaderboardTable from "./LeaderboardTable";
+import MyImageList from "./MyImageList";
 
 function Leaderboard() {
     return (
@@ -25,8 +26,18 @@ function Leaderboard() {
                 of the models' alignment capabilities. When using the provided data, please ensure to attribute the
                 source of the information.
             </Grid>
+            <Grid item xs={12}>
+                <MyImageList info={radarone}></MyImageList>
+            </Grid>
         </Grid>
     )
+}
+
+
+const radarone = {
+    caption: "ASR of attacks in different scenarios - Default Attack(English)", images: [{
+        img: "https://raw.githubusercontent.com/Enqurance/Figures/main/202404252120103.png", title: "Result 1"
+    }], width: "50%", col: 1
 }
 
 export default Leaderboard;

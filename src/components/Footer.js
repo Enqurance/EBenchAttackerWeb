@@ -5,6 +5,7 @@ import EmailIcon from '@mui/icons-material/Email';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import FaceIcon from '@mui/icons-material/Face';
 import "./Footer.css"
+import Statistic from "./Statistic";
 
 
 const Footer = () => {
@@ -42,6 +43,11 @@ const Footer = () => {
                 <Grid item className={"layout-copyright"}>
                     Beijing Advanced Innovation Center for Big
                     Data and Brain Computing
+                </Grid>
+            </Grid>
+            <Grid container justifyContent={"center"}>
+                <Grid item className={"layout-copyright"}>
+                    <Statistic/>
                 </Grid>
             </Grid>
         </Container>
