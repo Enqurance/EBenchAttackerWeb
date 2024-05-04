@@ -36,8 +36,8 @@ function Leaderboard() {
 
 const radarone = {
     caption: "ASR of attacks in different scenarios - Default Attack(English)", images: [{
-        img: "https://raw.githubusercontent.com/Enqurance/Figures/main/202404252120103.png", title: "Result 1"
-    }], width: "50%", col: 1
+        img: "https://raw.githubusercontent.com/Enqurance/Figures/main/202405042121283.png", title: "Result 1"
+    }], width: "60%", col: 1
 }
 
 export default Leaderboard;

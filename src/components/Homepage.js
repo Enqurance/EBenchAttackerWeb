@@ -44,6 +44,9 @@ function Homepage() {
                 Beijing
                 Advanced Innovation Center for Big Data and Brain Computing.
             </Grid>
+            <Grid tem xs={12} className="text-style paragraph-style">
+                ✨Update 2024.5.4: We have added experimental results for the LLaMA-3-8B-Instruct model~
+            </Grid>
             <Grid item xs={12} paddingTop={5}>
                 <MyImageList info={ebenchattacker}></MyImageList>
             </Grid>
