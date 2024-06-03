@@ -130,7 +130,7 @@ function Homepage() {
 
 const ebenchattacker = {
     caption: "EBenchAttacker", images: [{
-        img: "https://raw.githubusercontent.com/Enqurance/Figures/main/202404221025029.jpg", title: "EBenchAttacker"
+        img: "https://raw.githubusercontent.com/Enqurance/Figures/main/202406031129025.png", title: "EBenchAttacker"
     }], width: "80%", col: 1
 }
 
